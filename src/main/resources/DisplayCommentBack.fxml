@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="520.0" prefWidth="853.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.DisplayCommentBack">
+    <children>
+        <ListView fx:id="commentListView" layoutX="221.0" layoutY="163.0" prefHeight="286.0" prefWidth="617.0" style="-fx-background-color: #eaf2f1;" />
+        <Label layoutX="345.0" layoutY="23.0" prefHeight="74.0" prefWidth="334.0" text="List of Comments" textFill="#ff8a00">
+            <font>
+                <Font name="Baskerville Old Face" size="32.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tfUserId" layoutX="14.0" layoutY="318.0" prefHeight="26.0" prefWidth="150.0" />
+        <Button layoutX="670.0" layoutY="467.0" mnemonicParsing="false" onAction="#downloadPdfButtonClicked" prefHeight="34.0" prefWidth="122.0" style="-fx-background-color: #ff8a00;" text="Download PDF" textFill="WHITE">
+            <font>
+                <Font name="Bodoni MT" size="12.0" />
+            </font>
+        </Button>
+        <Button layoutX="212.0" layoutY="501.0" mnemonicParsing="false" onAction="#GoToFront" prefHeight="27.0" prefWidth="46.0" style="-fx-background-color: #ff8a00;" text="Front" textFill="WHITE">
+            <font>
+                <Font name="Bodoni MT" size="12.0" />
+            </font>
+        </Button>
+        <ImageView fitHeight="18.0" fitWidth="41.0" layoutX="203.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@goback.png" />
+            </image>
+        </ImageView>
+        <VBox layoutY="-5.0" prefHeight="556.0" prefWidth="194.0" style="-fx-background-color: #c5f26b;">
+            <children>
+                <ImageView fitHeight="56.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@logo.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="30.0" left="70.0" top="20.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Label text="Admin">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets bottom="10.0" left="75.0" top="-25.0" />
+                    </padding>
+                    <font>
+                        <Font name="Bodoni MT" size="15.0" />
+                    </font>
+                </Label>
+                <Button mnemonicParsing="false" onAction="#GoToPost" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #333333; -fx-background-radius: 12px;" text="Post" textFill="WHITE">
+                    <font>
+                        <Font name="Bodoni MT" size="13.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="20.0" />
+                    </VBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#GoToLike" prefHeight="26.0" prefWidth="157.0" style="-fx-background-color: #333333; -fx-background-radius: 12px;" text="Like" textFill="WHITE">
+                    <font>
+                        <Font name="Bodoni MT" size="13.0" />
+                    </font>
+                    <padding>
+                        <Insets top="2.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets left="20.0" />
+                    </VBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#GoToComment" prefHeight="26.0" prefWidth="159.0" style="-fx-background-color: #333333; -fx-background-radius: 12px;" text="Comment" textFill="WHITE">
+                    <font>
+                        <Font name="Bodoni MT" size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="20.0" top="5.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

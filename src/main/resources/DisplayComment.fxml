@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="520.0" prefWidth="853.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.DisplayComment">
+   <children>
+      <ListView fx:id="commentListView" layoutX="221.0" layoutY="163.0" prefHeight="286.0" prefWidth="617.0" style="-fx-background-color: #eaf2f1;" />
+      <Label layoutX="329.0" layoutY="82.0" prefHeight="74.0" prefWidth="334.0" text="List of Comments" textFill="#ff8000">
+         <font>
+            <Font name="Bodoni MT" size="32.0" />
+         </font>
+      </Label>
+      <Button layoutX="25.0" layoutY="414.0" mnemonicParsing="false" onAction="#handleUpdateComment" prefHeight="34.0" prefWidth="129.0" text="Update Comment">
+         <font>
+            <Font name="Bodoni MT" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="590.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleDeleteComment" prefHeight="34.0" prefWidth="129.0" style="-fx-background-color: #c5f26b;" text="Delete Comment">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tfContent" layoutX="14.0" layoutY="145.0" prefHeight="73.0" prefWidth="150.0" />
+      <TextField fx:id="tfPostId" layoutX="14.0" layoutY="254.0" prefHeight="26.0" prefWidth="150.0" />
+      <TextField fx:id="tfUserId" layoutX="14.0" layoutY="318.0" prefHeight="26.0" prefWidth="150.0" />
+      <Button layoutX="25.0" layoutY="371.0" mnemonicParsing="false" onAction="#handleSaveCommentChanges" prefHeight="34.0" prefWidth="129.0" style="-fx-background-color: #ff8000;" text="Save Changes" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="14.0" layoutY="111.0" prefHeight="34.0" prefWidth="199.0" text="Comment Content :" textFill="#098392">
+         <font>
+            <Font name="Bodoni MT Condensed" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="226.0" text="Post ID :" textFill="#098392">
+         <font>
+            <Font name="Bodoni MT Condensed" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="293.0" text="User ID :" textFill="#098392">
+         <font>
+            <Font name="Bodoni MT Condensed" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="737.0" layoutY="455.0" mnemonicParsing="false" onAction="#downloadPdfButtonClicked" prefHeight="34.0" prefWidth="122.0" style="-fx-background-color: #FF8000;" text="Download PDF" textFill="#2f2c2c">
+         <font>
+            <Font name="Bodoni MT" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="18.0" fitWidth="41.0" layoutX="203.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@goback.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="TOP_CENTER" layoutX="-7.0" prefHeight="93.0" prefWidth="902.0" style="-fx-background-color: #c5f26b;">
+         <children>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#GoToBack" prefHeight="77.0" prefWidth="122.0" style="-fx-background-color: #c5f26b;" text="Back" textFill="#070707">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#GoToPost" prefHeight="74.0" prefWidth="89.0" style="-fx-background-color: #c5f26b;" text="Post" textFill="#222525">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#GoToComment" prefHeight="74.0" prefWidth="107.0" style="-fx-background-color: #c5f26b;" text="Comment" textFill="#222525">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#AddLike" prefHeight="74.0" prefWidth="111.0" style="-fx-background-color: #c5f26b;" text="Likes" textFill="#222525">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="77.0" prefWidth="90.0" style="-fx-background-color: #c5f26b;" text="G2" textFill="#222525">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="77.0" prefWidth="108.0" style="-fx-background-color: #c5f26b;" text="G3" textFill="#222525">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="77.0" prefWidth="90.0" style="-fx-background-color: #c5f26b;" text="Sign Up" textFill="#222525">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="77.0" prefWidth="124.0" style="-fx-background-color: #c5f26b;" text="Sign In" textFill="#222525">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
